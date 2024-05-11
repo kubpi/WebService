@@ -6,7 +6,7 @@ import javax.jws.WebService;
 public class HelloWorldImpl implements HelloWorld {
     @Override
     public String getHelloWorldAsString(String name) {
-        return "Witaj świecie JAX-WS: " + name;
+        return "Twoja stara jest: " + name;
     }
 }
 
