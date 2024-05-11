@@ -42,6 +42,10 @@ public class FlightDatabase {
         }
 
         public String getFlightNumber() { return flightNumber; }
+        public String getCityFrom() { return cityFrom; }
+        public String getCityTo() { return cityTo; }
+        public String getDay() { return day; }
+        public String getTime() { return time; }
     }
 
     public static List<Flight> loadFlights() {
@@ -79,6 +83,8 @@ public class FlightDatabase {
         flights.add(new Flight("FL128", "Barcelona", "Madrid", "Monday", "09:00"));
         flights.add(new Flight("FL129", "San Francisco", "Seattle", "Tuesday", "10:45"));
         flights.add(new Flight("FL130", "Doha", "Abu Dhabi", "Wednesday", "12:30"));
+        flights.add(new Flight("FL131", "Doha", "Warsaw", "Wednesday", "12:30"));
+        flights.add(new Flight("FL132", "Doha", "Zurich", "Wednesday", "12:30"));
         // Dodaj więcej lotów
         return flights;
     }

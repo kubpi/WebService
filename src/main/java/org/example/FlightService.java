@@ -11,4 +11,10 @@ public interface FlightService {
 
     @WebMethod
     FlightDatabase.Flight getFlightByNumber(String flightNumber);
+
+    @WebMethod
+    Ticket purchaseTicket(String passengerName, String passengerEmail, String passengerPhone, String flightNumber);
+
+    @WebMethod
+    List<FlightDatabase.Flight> searchFlights(String flightNumber, String city, String date);
 }
