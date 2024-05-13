@@ -1,14 +1,21 @@
 package org.example;
+
 import org.example.FlightDatabase.Flight;
 import javax.jws.WebService;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @WebService(endpointInterface = "org.example.FlightService")
 public class FlightServiceImpl implements FlightService {
+    private static List<Ticket> tickets = new ArrayList<>();
+    private static List<String> reservedFlights = new ArrayList<>();
+
     @Override
     public List<FlightDatabase.Flight> getAllFlights() {
-        return FlightDatabase.loadFlights();
+        return FlightDatabase.loadFlights().stream()
+                .filter(flight -> !reservedFlights.contains(flight.getFlightNumber()))
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -19,7 +26,7 @@ public class FlightServiceImpl implements FlightService {
                 return flight;
             }
         }
-        return null; // Zwraca null, jeśli nie znajdzie lotu o danym numerze
+        return null; // Returns null if the flight is not found
     }
 
     @Override
@@ -32,15 +39,16 @@ public class FlightServiceImpl implements FlightService {
                 .collect(Collectors.toList());
     }
 
-
     @Override
     public Ticket purchaseTicket(String passengerName, String passengerEmail, String passengerPhone, String flightNumber) {
         Flight flight = getFlightByNumber(flightNumber);
-        if (flight != null) {
+        if (flight != null && !reservedFlights.contains(flightNumber)) {
+            Ticket ticket = new Ticket(passengerName, passengerEmail, passengerPhone, flight);
+            tickets.add(ticket);
+            reservedFlights.add(flightNumber); // Mark the flight as reserved
             System.out.println(passengerName + passengerEmail + passengerPhone + flight);
-            return new Ticket(passengerName, passengerEmail, passengerPhone, flight);
-
+            return ticket;
         }
-        return null;  // Można zwrócić błąd lub wartość null, jeśli lot nie zostanie znaleziony
+        return null; // Returns null if the flight is not found or already reserved
     }
 }

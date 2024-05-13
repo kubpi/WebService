@@ -21,6 +21,8 @@ public class FlightDatabase {
         String day;
         @XmlElement(name = "time")
         String time;
+        @XmlElement(name = "visible")
+        boolean visible = true; // New field to mark flights as invisible
 
         public Flight(String flightNumber, String cityFrom, String cityTo, String day, String time) {
             this.flightNumber = flightNumber;
@@ -28,6 +30,7 @@ public class FlightDatabase {
             this.cityTo = cityTo;
             this.day = day;
             this.time = time;
+            this.visible = true;
         }
 
         @Override
@@ -46,6 +49,7 @@ public class FlightDatabase {
         public String getCityTo() { return cityTo; }
         public String getDay() { return day; }
         public String getTime() { return time; }
+
     }
 
     public static List<Flight> loadFlights() {

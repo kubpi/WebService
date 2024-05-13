@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68cd75ce-8949-4435-ad7e-117902a9ccc7" name="Changes" comment="Dodanie kodu do projektu serwera.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Ticket.java" afterDir="false" />
+    <list default="true" id="68cd75ce-8949-4435-ad7e-117902a9ccc7" name="Changes" comment="Dodanie filtrowania lotów po nrlotu, miescie i dacie.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Buyer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FlightDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FlightDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FlightService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FlightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FlightServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715449207216</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Dodanie filtrowania lotów po nrlotu, miescie i dacie.">
+      <option name="closed" value="true" />
+      <created>1715458309972</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715458309972</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,17 +161,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="WebService ćwiczenie 1" />
     <MESSAGE value="Dodanie kodu do projektu serwera." />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodanie kodu do projektu serwera." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/FlightServiceImpl.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Dodanie filtrowania lotów po nrlotu, miescie i dacie." />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodanie filtrowania lotów po nrlotu, miescie i dacie." />
   </component>
 </project>
