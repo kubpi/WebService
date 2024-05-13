@@ -1,5 +1,7 @@
 package org.example;
+
 import org.example.FlightDatabase.Flight;
+
 public class Ticket {
     private String passengerName;
     private String passengerEmail;

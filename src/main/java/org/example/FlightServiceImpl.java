@@ -51,4 +51,12 @@ public class FlightServiceImpl implements FlightService {
         }
         return null; // Returns null if the flight is not found or already reserved
     }
+
+    @Override
+    public List<FlightDatabase.Flight> getBookedFlightsByPassengerEmail(String passengerEmail) {
+        return tickets.stream()
+                .filter(ticket -> ticket.getPassengerEmail().equalsIgnoreCase(passengerEmail))
+                .map(Ticket::getFlightDetails)
+                .collect(Collectors.toList());
+    }
 }

@@ -17,4 +17,7 @@ public interface FlightService {
 
     @WebMethod
     List<FlightDatabase.Flight> searchFlights(String flightNumber, String city, String date);
+
+    @WebMethod
+    List<FlightDatabase.Flight> getBookedFlightsByPassengerEmail(String passengerEmail);
 }

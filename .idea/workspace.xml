@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68cd75ce-8949-4435-ad7e-117902a9ccc7" name="Changes" comment="Dodanie filtrowania lotów po nrlotu, miescie i dacie.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Buyer.java" afterDir="false" />
+    <list default="true" id="68cd75ce-8949-4435-ad7e-117902a9ccc7" name="Changes" comment="Poprawa wyszukiwania lotów oraz dodanie mozliwosci zarezerowowania lotu przez uzytkownika :)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FlightDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FlightDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FlightService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FlightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FlightServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Ticket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Projekt_RSI_Serwer-13-05-24" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,7 +49,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Projekt__RSI__Serwer",
+    "git-widget-placeholder": "Ahhh",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -144,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715458309972</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Poprawa wyszukiwania lotów oraz dodanie mozliwosci zarezerowowania lotu przez uzytkownika :)">
+      <option name="closed" value="true" />
+      <created>1715631039644</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715631039644</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,6 +170,7 @@
     <MESSAGE value="WebService ćwiczenie 1" />
     <MESSAGE value="Dodanie kodu do projektu serwera." />
     <MESSAGE value="Dodanie filtrowania lotów po nrlotu, miescie i dacie." />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodanie filtrowania lotów po nrlotu, miescie i dacie." />
+    <MESSAGE value="Poprawa wyszukiwania lotów oraz dodanie mozliwosci zarezerowowania lotu przez uzytkownika :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Poprawa wyszukiwania lotów oraz dodanie mozliwosci zarezerowowania lotu przez uzytkownika :)" />
   </component>
 </project>
