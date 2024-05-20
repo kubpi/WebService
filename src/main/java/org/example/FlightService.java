@@ -13,11 +13,13 @@ public interface FlightService {
     FlightDatabase.Flight getFlightByNumber(String flightNumber);
 
     @WebMethod
-    Ticket purchaseTicket(String passengerName, String passengerEmail, String passengerPhone, String flightNumber);
+    byte[] purchaseTicket(String passengerName, String passengerEmail, String passengerPhone, String flightNumber);
 
     @WebMethod
     List<FlightDatabase.Flight> searchFlights(String flightNumber, String city, String date);
 
     @WebMethod
     List<FlightDatabase.Flight> getBookedFlightsByPassengerEmail(String passengerEmail);
+
+    byte[] getTicketPdf(String passengerEmail, String flightNumber);
 }

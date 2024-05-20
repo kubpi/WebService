@@ -1,7 +1,9 @@
 package org.example;
 
 import org.example.FlightDatabase.Flight;
+
 import javax.jws.WebService;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -40,17 +42,38 @@ public class FlightServiceImpl implements FlightService {
     }
 
     @Override
-    public Ticket purchaseTicket(String passengerName, String passengerEmail, String passengerPhone, String flightNumber) {
+    public byte[] purchaseTicket(String passengerName, String passengerEmail, String passengerPhone, String flightNumber) {
         Flight flight = getFlightByNumber(flightNumber);
         if (flight != null && !reservedFlights.contains(flightNumber)) {
             Ticket ticket = new Ticket(passengerName, passengerEmail, passengerPhone, flight);
             tickets.add(ticket);
             reservedFlights.add(flightNumber); // Mark the flight as reserved
-            System.out.println(passengerName + passengerEmail + passengerPhone + flight);
-            return ticket;
+
+            try {
+                return PdfGenerator.generateTicketPdf(ticket);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         return null; // Returns null if the flight is not found or already reserved
     }
+
+    @Override
+    public byte[] getTicketPdf(String passengerEmail, String flightNumber) {
+        for (Ticket ticket : tickets) {
+            if (ticket.getPassengerEmail().equalsIgnoreCase(passengerEmail) &&
+                    ticket.getFlightDetails().getFlightNumber().equals(flightNumber)) {
+                try {
+                    return PdfGenerator.generateTicketPdf(ticket);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return null; // Returns null if the ticket is not found
+    }
+
+
 
     @Override
     public List<FlightDatabase.Flight> getBookedFlightsByPassengerEmail(String passengerEmail) {
